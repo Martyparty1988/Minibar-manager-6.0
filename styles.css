@@ -1,75 +1,53 @@
-/* Globální stylování */
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
     background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
+    width: 100%;
     padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
     color: white;
-    border-radius: 8px 8px 0 0;
-    margin: -20px -20px 20px -20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.villa-oh-yeah { background: linear-gradient(135deg, #FF385C, #FF8B3D); }
-.villa-little-castle { background: linear-gradient(135deg, #4A90E2, #357ABD); }
-.villa-amazing-pool { background: linear-gradient(135deg, #50E3C2, #00A699); }
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
 
-.currency-toggle {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
 
 .currency-toggle button {
-    padding: 10px 20px;
-    border: none;
-    background: #f0f0f0;
-    cursor: pointer;
-    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
     border-radius: 8px;
-    margin: 0 10px;
-    transition: all 0.2s ease-in-out;
-}
-
-.currency-toggle button.active {
-    background: #FF385C;
+    border: none;
     color: white;
 }
 
-.invoice {
-    margin-top: 20px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 4px;
-    border: 1px solid #dee2e6;
-}
-
-.invoice-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #dee2e6;
-}
-
-.invoice-total {
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-    border-top: 2px solid #dee2e6;
-    padding-top: 15px;
-}
+/* Styly pro tlačítka měny */
+#czk-btn { background-color: #4CAF50; }
+#eur-btn { background-color: #2196F3; }
