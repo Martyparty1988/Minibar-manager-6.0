@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="header villa-oh-yeah" id="headerGradient">
+        <div class="header" id="headerGradient">
             <h1>K&D Minibar Management</h1>
         </div>
 
         <!-- Výběr vily -->
         <div class="form-group">
             <label for="villa">Výběr vily</label>
-            <select id="villa" onchange="updateVillaSettings()">
+            <select id="villa">
                 <option value="oh-yeah">OH YEAH VILLA</option>
                 <option value="little-castle">LITTLE CASTLE</option>
                 <option value="amazing-pool">AMAZING POOL</option>
@@ -24,7 +24,7 @@
 
         <!-- Přepínač měny -->
         <div class="currency-toggle">
-            <button id="czk-btn" class="active" onclick="setCurrency('CZK')">CZK</button>
+            <button id="czk-btn" onclick="setCurrency('CZK')">CZK</button>
             <button id="eur-btn" onclick="setCurrency('EUR')">EUR</button>
         </div>
 
@@ -52,7 +52,6 @@
         <div id="invoiceContainer"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
