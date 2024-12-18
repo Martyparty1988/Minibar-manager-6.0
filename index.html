@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&D Minibar Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header villa-oh-yeah" id="headerGradient">
+            <h1>K&D Minibar Management</h1>
+        </div>
+
+        <!-- Výběr vily -->
+        <div class="form-group">
+            <label for="villa">Výběr vily</label>
+            <select id="villa" onchange="updateVillaSettings()">
+                <option value="oh-yeah">OH YEAH VILLA</option>
+                <option value="little-castle">LITTLE CASTLE</option>
+                <option value="amazing-pool">AMAZING POOL</option>
+            </select>
+        </div>
+
+        <!-- Přepínač měny -->
+        <div class="currency-toggle">
+            <button id="czk-btn" class="active" onclick="setCurrency('CZK')">CZK</button>
+            <button id="eur-btn" onclick="setCurrency('EUR')">EUR</button>
+        </div>
+
+        <!-- Kurz měny -->
+        <div class="form-group">
+            <label for="exchange-rate">Kurz CZK/EUR</label>
+            <input type="number" id="exchange-rate" placeholder="Zadejte kurz" step="0.1" value="25">
+        </div>
+
+        <!-- Počet hostů a nocí -->
+        <div class="form-group">
+            <label for="guests">Počet hostů</label>
+            <input type="number" id="guests" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+            <label for="nights">Počet nocí</label>
+            <input type="number" id="nights" min="1" value="1">
+        </div>
+
+        <!-- Položky -->
+        <div id="villa-items"></div>
+
+        <button onclick="generateInvoice()">Generovat fakturu</button>
+        <div id="invoiceContainer"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
